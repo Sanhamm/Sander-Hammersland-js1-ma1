@@ -57,13 +57,16 @@ kittens(cats);
 
 //-----------------------------------------------------------
 //task 8
-const catBox = document.querySelector("div.class")
+const catBox = document.querySelector("div.cat-container")
 
 function createCats (cats){
-    let newCats = "";
-    for(var kitty of cats){
-        newCats += `<h5>${kitty.name}</h5> age: <p>${kitty.age}</p>`
+    let pus = "";
+    for(let kitty of cats) {
+        pus += `<div><h5> ${kitty.name} </h5></div>`;
+        if(kitty.age) pus += `<div><p>${kitty.age}</p></div>`;
+        else pus += "age not known"
     }
-    return newCats;
+    return pus;
+    
 }
-
+catBox.innerHTML = createCats(cats)
