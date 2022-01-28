@@ -70,3 +70,6 @@ function createCats (cats){
     
 }
 catBox.innerHTML = createCats(cats)
+
+
+//
